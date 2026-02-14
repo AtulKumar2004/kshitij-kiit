@@ -11,6 +11,56 @@
   }
 }
 
+@keyframes sail-wave {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.2px);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    r: 0.5;
+    opacity: 0.3;
+  }
+  50% {
+    r: 1.2;
+    opacity: 0.1;
+  }
+  100% {
+    r: 0.5;
+    opacity: 0.3;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
 body {
   font-family: "Quicksand", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.animate-sail-wave {
+  animation: sail-wave 2s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

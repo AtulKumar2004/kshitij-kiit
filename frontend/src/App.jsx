@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import AboutUs from './components/AboutUs';
 
 function App() {
   const words = ['Inside', 'Within', 'Deeper', 'Godward'];
@@ -61,7 +62,7 @@ function App() {
 
       {/* Logo Positioned Over Sun */}
       <div className={`fixed left-1/2 -translate-x-1/2 z-40 transition-all duration-300 ${
-        isScrolled ? 'top-2' : 'top-[12%]'
+        isScrolled ? 'top-2' : 'top-[18%]'
       }`}>
         <img 
           src="/Logo.png" 
@@ -77,7 +78,7 @@ function App() {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/background.png')" }}
+          style={{ backgroundImage: "url('/backgroun.png')" }}
         >
           {/* Dark Overlay */}
           <div className="absolute inset-0"></div>
@@ -104,15 +105,9 @@ function App() {
         </div>
       </div>
 
-      {/* Additional content for scrolling effect */}
-      <div className="relative bg-gray-900 text-white py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-          <p className="text-gray-300 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </div>
+      {/* About Us Section with Boat Animation */}
+      <AboutUs />
+      
     </div>
   );
 }
