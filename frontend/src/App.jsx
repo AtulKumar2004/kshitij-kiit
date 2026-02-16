@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import AboutUs from './components/AboutUs';
+import WhatWeDo from './components/WhatWeDo';
 
 function App() {
   const words = ['Inside', 'Within', 'Deeper', 'Godward'];
@@ -107,6 +108,7 @@ function App() {
 
       {/* About Us Section with Boat Animation */}
       <AboutUs />
+      <WhatWeDo/>
       
     </div>
   );
