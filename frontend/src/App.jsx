@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import AboutUs from './components/AboutUs';
+import WhyKshitij from './components/WhyKshitij';
+
 
 function App() {
   const words = ['Inside', 'Within', 'Deeper', 'Godward'];
@@ -106,7 +108,18 @@ function App() {
       </div>
 
       {/* About Us Section with Boat Animation */}
-      <AboutUs />
+      {/* Shared Forest Background */}
+<div
+  className="relative bg-cover bg-center bg-fixed"
+  style={{ backgroundImage: "url('/image.png')" }}
+>
+  <div className="relative z-10">
+    <AboutUs />
+    <WhyKshitij />
+  </div>
+</div>
+
+
       
     </div>
   );
